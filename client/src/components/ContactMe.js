@@ -7,8 +7,26 @@ const ContactMe = () => {
     const [message, setMessage] = useState('');
     const [emailSent, setEmailSent] = useState(false);
 
-    const handleSubmit = () =>{
-        console.log("submit")
+    const handleSubmit = async (e) =>{
+        e.preventDefault();
+        const response = await fetch("http://localhost:8000/send", {
+            method: "POST",
+            headers: {
+                    "Content-type": "application/json",
+                },
+            body: JSON.stringify({name, email, message}),
+        })
+        .then((res)=> res.json())
+        .then((data)=> {
+            console.log(data)
+            if(data.status === 200){
+                setName("");
+                setEmail("");
+                setMessage("");
+            }
+        })
+        .catch((err)=> console.log(err));
+        
     }
 return(
     //have linked in and socials on there
@@ -18,7 +36,7 @@ return(
             LETS CONNECT!
         </h2>
         <div className="big-section">
-            <form id="contact-form" onSubmit={handleSubmit()}>
+            <form id="contact-form" onSubmit={handleSubmit}>
                 <div className='section1'>
                     <div>
                         <input className='width100 form-format' type="text" name="name" placeholder="name" value={name} required onChange={(ev)=> setName(ev.target.value)}/>
