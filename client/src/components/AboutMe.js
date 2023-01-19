@@ -6,7 +6,6 @@ const AboutMe = () => {
     // make flex direction is column when screen small and width is 80%
 return(
     <>
-    
     <div className="section-about">
         <div className="about-me-background"></div>
         <div className="position flex">
@@ -19,7 +18,6 @@ return(
             </div>
         </div>
     </div>
-        
     </>
 );
 };
