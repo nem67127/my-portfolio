@@ -1,0 +1,200 @@
+/* make a color for the green and the blue */
+
+.App {
+  color: #334036;
+}
+
+.header {
+  min-height: 7vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.welcome {
+  background-image: url(photos/schoenlake.jpeg);
+  background-size: cover;
+  background-position: center center;
+  height: 95vh;
+}
+
+.rightside{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 15vw;
+}
+
+.padded {
+  padding-top: 7vh;
+}
+
+.capital{
+  font-size: calc(20px + 2vmin);
+}
+
+p {
+  font-size: calc(10px +2vmin);
+}
+
+.small-section {
+  height: 20%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.big-section {
+  height: 80%;
+}
+
+.flex {
+  display: flex;
+}
+
+.position {
+  position: absolute;
+}
+
+.halfsection {
+  width: 45vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* About me section */
+
+.section-about {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-background {
+  background-image: url(./photos/light-waves.png);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 120vh;
+  margin-top: -25vh;
+}
+
+.me-photo {
+  background-image: url(./photos/me-lipa.jpeg) ;
+  width: 40vw; height: 40vw; object-fit: cover; 
+  object-position: 60% 0;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+.profile-bio {
+  text-align: center;
+  font-size: 20px;
+}
+
+/* My Work carosel slider */
+
+.section-work {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.inner-carousel {
+  display: inline-flex;
+
+}
+
+.start {
+  margin-left: 7.5vw;
+}
+
+.card{
+  margin-right: 7.5vw;
+  width: 80vw;
+  height: 95%;
+  background: linear-gradient(217deg, rgba(237,240,241, 0.8), rgba(187, 227, 217, 0) 70.71%),
+            linear-gradient(336deg, rgba(90,173,125, 0.8), rgba(178, 203, 178, 0) 70.71%),
+            linear-gradient(140deg, rgba(199,219,229, 0.8), rgba(157, 157, 167, 0) 70.71%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.img-mywork {
+  object-fit: scale-down;
+  height: 90%;
+  align-self: center;
+}
+
+.img-wrapper {
+  height: 100%;
+  display:flex;
+  justify-content: center;
+}
+
+.img-description {
+  visibility: hidden;
+  position: relative;
+  width: 80%;
+  top: -100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover .img-description{
+  visibility: visible;
+}
+
+/* Conctact Me section */
+
+.section-contact {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 7.5vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  height: 100%;
+  font-size: 20px;
+}
+
+.section2 {
+  height: 70%;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.height100 {
+  height: 98%;
+}
+
+.form-format {
+  padding: 10px;
+  margin-bottom: 2vh;
+}
