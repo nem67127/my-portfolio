@@ -1,6 +1,6 @@
 const Footer = () => {
 return(
-    <div>2023 Natasha Moses</div>
+    <div className="footer">2023 Natasha Moses</div>
 );
 }
 
