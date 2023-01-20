@@ -9,7 +9,7 @@ const ContactMe = () => {
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
-        const response = await fetch("http://localhost:8000/send", {
+        await fetch("http://localhost:8000/send", {
             method: "POST",
             headers: {
                     "Content-type": "application/json",
@@ -18,11 +18,14 @@ const ContactMe = () => {
         })
         .then((res)=> res.json())
         .then((data)=> {
-            console.log(data)
             if(data.status === 200){
                 setName("");
                 setEmail("");
                 setMessage("");
+                alert("Message Sent 😀")
+
+            } else if(data.status === 424){
+                alert("Message failed to send")
             }
         })
         .catch((err)=> console.log(err));
