@@ -6,22 +6,10 @@ require("dotenv").config();
 
 const PORT = 8000;
 
-app.use(function (req, res, next) {
-        res.header(
-            "Access-Control-Allow-Methods",
-            "OPTIONS, HEAD, GET, PUT, POST, DELETE"
-        );
-        res.header(
-            "Access-Control-Allow-Headers",
-            "Origin, X-Requested-With, Content-Type, Accept"
-        );
-        next();
-    })
-
 app.use(express.json());
 app.use(cors());
 
-//transporter object
+//transporter object to authorize my email 
 
 let transporter = nodemailer.createTransport({
     service: "gmail",
@@ -40,6 +28,9 @@ transporter.verify((err, success) => {
         ? console.log(err)
         : console.log(`=== Server is ready to take messages: ${success} ===`);
 });
+
+
+// sending the email
 
 app.post("/send", (req, res) => {
 

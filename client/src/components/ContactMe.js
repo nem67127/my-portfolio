@@ -7,6 +7,8 @@ const ContactMe = () => {
     const [message, setMessage] = useState('');
     const [emailSent, setEmailSent] = useState(false);
 
+    //sending the email
+
     const handleSubmit = async (e) =>{
         e.preventDefault();
         await fetch("http://localhost:8000/send", {
