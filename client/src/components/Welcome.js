@@ -7,7 +7,7 @@ return (
         <div className="welcome">
             <div className="rightside">
                 <div className="box">
-                    <h1 className="greeting padded capital">WELCOME</h1>
+                    <h1 className="greeting padded">WELCOME</h1>
                     <p className="greeting">to my portfolio</p>
                 </div>
             </div>

@@ -24,10 +24,10 @@ const ContactMe = () => {
                 setName("");
                 setEmail("");
                 setMessage("");
-                alert("Message Sent 😀")
-
+                setEmailSent(true);
+                alert("Message Sent 😀");  
             } else if(data.status === 424){
-                alert("Message failed to send")
+                alert("Message failed to send");
             }
         })
         .catch((err)=> console.log(err));
@@ -37,7 +37,9 @@ return(
     //have linked in and socials on there
     // background of ripples cominng up from bottom
     <div className="section-contact">
-        <h2 className="capital small-section">
+        <div className="contact-me-background"></div>
+        <div className="contact-form-display position">
+            <h2 className="capital small-section">
             LETS CONNECT!
         </h2>
         <div className="big-section">
@@ -54,10 +56,11 @@ return(
                 <div className='section2'>
                     <textarea className='width100 height100 form-format' name="message" placeholder="message" value={message} required onChange={(ev)=> setMessage(ev.target.value)}/>
                 </div>
-                <div>
+                <div classsName="section1">
                     <button className="form-format" type="submit" value="submit">Send</button> 
                 </div>
             </form>
+        </div>
         </div>
     </div>
 );

@@ -1,4 +1,4 @@
-/* make a color for the green and the blue */
+/* make a color for the green and the blue and white */
 
 .App {
   color: #334036;
@@ -87,7 +87,9 @@ p {
 
 .me-photo {
   background-image: url(./photos/me-lipa.jpeg) ;
-  width: 40vw; height: 40vw; object-fit: cover; 
+  width: 40vw; 
+  height: 40vw; 
+  object-fit: cover; 
   object-position: 60% 0;
 }
 
@@ -169,9 +171,25 @@ p {
 .section-contact {
   height: 85vh;
   display: flex;
+}
+
+.contact-form-display {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-left: 7.5vw;
+  height: 85vh;
+}
+
+.contact-me-background {
+  background-image: url(./photos/bluue-wave.png);
+  width: 100%;
+  height: 100%;
+  background-size: 110%;
+  background-position-x: -5vw;
+  background-position-y: 15vh;
+  background-repeat: no-repeat;
+  object-position: 60% 30%;
 }
 
 form {

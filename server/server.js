@@ -1,12 +1,14 @@
 const express = require('express');
 const nodemailer = require("nodemailer");
 const app = express();
+const bodyParser = require("body-parser");
 const cors = require("cors");
 require("dotenv").config();
 
-const PORT = 8000;
+const PORT = 8000 || process.env.PORT;
 
 app.use(express.json());
+app.use(bodyParser.json());
 app.use(cors());
 
 //transporter object to authorize my email 
@@ -35,7 +37,7 @@ transporter.verify((err, success) => {
 app.post("/send", (req, res) => {
 
     let mailOptions = {
-        from: `${req.body.email}`,
+        from: req.body.email,
         to: process.env.EMAIL,
         subject: `Message from: ${req.body.email}`,
         text: `${req.body.message}`,
