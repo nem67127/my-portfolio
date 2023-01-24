@@ -35,7 +35,6 @@ const ContactMe = () => {
     }
 return(
     //have linked in and socials on there
-    // background of ripples cominng up from bottom
     <div className="section-contact">
         <div className="contact-me-background"></div>
         <div className="contact-form-display position">
@@ -54,10 +53,10 @@ return(
                 </div>
                 
                 <div className='section2'>
-                    <textarea className='width100 height100 form-format' name="message" placeholder="message" value={message} required onChange={(ev)=> setMessage(ev.target.value)}/>
+                    <textarea type="text-area" className='width100 height100 padding2' name="message" placeholder="message" value={message} required onChange={(ev)=> setMessage(ev.target.value)}/>
                 </div>
-                <div classsName="section1">
-                    <button className="form-format" type="submit" value="submit">Send</button> 
+                <div>
+                    <button className="padding2" type="submit" value="submit">Send</button> 
                 </div>
             </form>
         </div>

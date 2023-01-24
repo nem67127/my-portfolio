@@ -196,16 +196,23 @@ form {
   display: flex;
   flex-direction: column;
   width: 60vw;
-  height: 100%;
+  height: 90%;
   font-size: 20px;
+  background-color:rgba(240, 243, 244, 0.7);
+  padding: 1vw;
 }
 
 .section2 {
   height: 70%;
+  margin-bottom: 2vh;
 }
 
 .width100 {
   width: 100%;
+}
+
+.padding2 {
+  padding: 10px;
 }
 
 .height100 {
@@ -216,6 +223,28 @@ form {
   padding: 10px;
   margin-bottom: 2vh;
 }
+
+input {
+  border: none;
+  color:#334036;
+}
+
+button{
+  border: none;
+  background-color:rgba(90,173,125);
+  color:#334036;
+}
+
+button:hover {
+  color: rgba(240, 243, 244, 0.7);
+  background-color: rgba(90,173,125, 0.5) ;
+}
+
+textarea {
+  border: none;
+  color:#334036;
+}
+
 
 .footer {
   min-height: 7vh;
