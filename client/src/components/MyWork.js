@@ -1,16 +1,30 @@
 
+import { useEffect, useState } from "react";
 import madeLocallyImage from "../photos/madeLocally.png";
 
 const MyWork = () => {
 
+    // //fetch projects from MongoDB and set them inside
+    // const [projects, setProjects] = useState;
+    // //useEffect to fetch projects
+    // useEffect(()=>{
+    //     fetch(`/api/${projects}`)
+    //     .then((res) => res.json())
+    //     .then((data) => {
+    //       setProjects(data.data);
+    //     })
+    //     .catch((err) => {
+    //       console.log(err.message);
+    //     });
+    // })
 
 return (
-    // ? retrieve projects from database
     // if so will need projects component and map over them ? 
     // may have pop up when clicked to be bigger details or go to another page?
     <div className="section-work">
         <h2 className="capital small-section">MY WORK</h2>
         <div className="big-section carousel" >
+            {/* will map over projects to create cards */}
             <div className="inner-carousel">
                 < div className="card start">
                     <div className="img-wrapper">
@@ -32,6 +46,7 @@ return (
                 </div>
             </div>
         </div>
+
     </div>
 );
 }

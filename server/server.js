@@ -3,6 +3,7 @@ const nodemailer = require("nodemailer");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const { getAllProjects } = require('./handlers/projectHanders');
 require("dotenv").config();
 
 const PORT = 8000 || process.env.PORT;
@@ -10,6 +11,10 @@ const PORT = 8000 || process.env.PORT;
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
+
+//retrieveing all projects
+
+app.get("api/projects", getAllProjects)
 
 //transporter object to authorize my email 
 
@@ -30,7 +35,6 @@ transporter.verify((err, success) => {
         ? console.log(err)
         : console.log(`=== Server is ready to take messages: ${success} ===`);
 });
-
 
 // sending the email
 
