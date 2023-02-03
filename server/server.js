@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const { getAllProjects } = require('./handlers/projectHanders');
+const { getAllProjects } = require('./projectHanders');
 require("dotenv").config();
 
 const PORT = 8000 || process.env.PORT;

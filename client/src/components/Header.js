@@ -1,4 +1,4 @@
-import {FiMenu} from "react-icons/fi";
+
 
 const Header = () => {
 return(
@@ -7,7 +7,7 @@ return(
     // dropdown component ? 
 <div className="header">
     <div className="logo">digitallytash</div>
-    <div><FiMenu/></div>
+    <div>Menu</div>
 </div>
 );
 };
