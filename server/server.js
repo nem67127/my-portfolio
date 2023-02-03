@@ -8,13 +8,25 @@ require("dotenv").config();
 
 const PORT = 8000 || process.env.PORT;
 
-app.use(express.json());
+
+app.use(function (req, res, next) {
+    res.header(
+        "Access-Control-Allow-Methods",
+        "OPTIONS, HEAD, GET, PUT, POST, DELETE"
+    );
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+    });
 app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
 
 //retrieveing all projects
 
-app.get("api/projects", getAllProjects)
+app.get("/projects", getAllProjects);
 
 //transporter object to authorize my email 
 
@@ -60,4 +72,4 @@ app.post("/send", (req, res) => {
 
 app.listen(PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
-})
+});

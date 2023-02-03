@@ -4,19 +4,20 @@ import madeLocallyImage from "../photos/madeLocally.png";
 
 const MyWork = () => {
 
-    // //fetch projects from MongoDB and set them inside
-    // const [projects, setProjects] = useState;
-    // //useEffect to fetch projects
-    // useEffect(()=>{
-    //     fetch(`/api/${projects}`)
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       setProjects(data.data);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err.message);
-    //     });
-    // })
+    //fetch projects from MongoDB and set them inside
+    const [projects, setProjects] = useState("");
+    //useEffect to fetch projects
+    useEffect(()=>{
+        fetch(`http://localhost:8000/projects`)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data.data);
+                setProjects(data.data);
+        }).catch((err)=>{
+            console.log(err);
+        })  
+    },[])
+    
 
 return (
     // if so will need projects component and map over them ? 
