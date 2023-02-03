@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import madeLocallyImage from "../photos/madeLocally.png";
+import styled from "styled-components";
 
 const MyWork = () => {
 
@@ -22,8 +23,8 @@ const MyWork = () => {
 return (
     // if so will need projects component and map over them ? 
     // may have pop up when clicked to be bigger details or go to another page?
-    <div className="section-work">
-        <h2 className="capital small-section">MY WORK</h2>
+    <Wrapper>
+        <Title>MY WORK</Title>
         <div className="big-section carousel" >
             {/* will map over projects to create cards */}
             <div className="inner-carousel">
@@ -48,8 +49,23 @@ return (
             </div>
         </div>
 
-    </div>
+    </Wrapper>
 );
 }
 
 export default MyWork;
+
+const Wrapper = styled.div`
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const Title = styled.h2`
+    font-size: calc(20px + 2vmin);
+    height: 20%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+`;

@@ -4,31 +4,6 @@
   color: #334036;
 }
 
-.header {
-  min-height: 7vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-size: calc(10px + 2vmin);
-  padding-left: 5vw;
-  padding-right: 5vw;
-}
-
-.welcome {
-  background-image: url(photos/schoenlake.jpeg);
-  background-size: cover;
-  background-position: center center;
-  height: 95vh;
-}
-
-.rightside{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-right: 15vw;
-}
-
 .padded {
   padding-top: 7vh;
 }
@@ -67,43 +42,9 @@ p {
   justify-content: center;
 }
 
-/* About me section */
-
-
-.about-me-background {
-  background-image: url(./photos/light-waves.png);
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 120vh;
-  margin-top: -25vh;
-}
-
-.me-photo {
-  background-image: url(./photos/me-lipa.jpeg) ;
-  width: 40vw; 
-  height: 40vw; 
-  object-fit: cover; 
-  object-position: 60% 0;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-}
-.profile-bio {
-  text-align: center;
-  font-size: 20px;
-}
 
 /* My Work carosel slider */
 
-.section-work {
-  height: 85vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .carousel {
   display: flex;
@@ -114,7 +55,6 @@ p {
 
 .inner-carousel {
   display: inline-flex;
-
 }
 
 .start {

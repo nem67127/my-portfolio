@@ -1,15 +1,24 @@
-
+import styled from "styled-components";
 
 const Header = () => {
 return(
-    //navigation bar
     // logo / title on left and hamburger dropdown on right
-    // dropdown component ? 
-<div className="header">
-    <div className="logo">digitallytash</div>
-    <div>Menu</div>
-</div>
+<Wrapper>
+    <div>digitallytash</div>
+    {/* <div>Menu</div> */}
+</Wrapper>
 );
 };
 
 export default Header;
+
+const Wrapper = styled.div`
+    min-height: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(10px + 2vmin);
+    padding-left: 5vw;
+    padding-right: 5vw;
+`;
