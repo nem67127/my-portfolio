@@ -1,12 +1,11 @@
 import me from "../photos/me-lipa.jpeg";
+import styled from "styled-components";
 
 const AboutMe = () => {
-    //create info paragraph
     // make background animation into ripple effect
     // make flex direction is column when screen small and width is 80%
 return(
-    <>
-    <div className="section-about">
+    <Wrapper>
         <div className="about-me-background"></div>
         <div className="position flex">
             <div className="halfsection">
@@ -17,9 +16,15 @@ return(
                 <div className="profile-bio">Hi there! I’m Natasha Moses, a former Rehab Assistant turned Full Stack Web Developer living in beautiful BC. I’m a lifelong learner and lover of all things creative. I spend my free time exploring nature, doodling, and crafting jewelry with my trusty pup (Lipa) at my side. Let's collaborate and create something awesome!</div>
             </div>
         </div>
-    </div>
-    </>
+    </Wrapper>
 );
 };
 
 export default AboutMe;
+
+const Wrapper = styled.div`
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;

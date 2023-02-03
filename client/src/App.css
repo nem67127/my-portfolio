@@ -69,12 +69,6 @@ p {
 
 /* About me section */
 
-.section-about {
-  height: 85vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .about-me-background {
   background-image: url(./photos/light-waves.png);
