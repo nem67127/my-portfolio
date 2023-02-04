@@ -21,4 +21,8 @@ const Wrapper = styled.div`
     font-size: calc(10px + 2vmin);
     padding-left: 5vw;
     padding-right: 5vw;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(255,255,255, 0.9);
 `;

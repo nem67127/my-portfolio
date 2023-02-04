@@ -14,7 +14,8 @@ return(
             </PhotoBox>
             <AboutBox>
                 <Title>ABOUT ME</Title>
-                <Bio>Hi there! I’m Natasha Moses, a former Rehab Assistant turned Full Stack Web Developer living in beautiful BC. I’m a lifelong learner and lover of all things creative. I spend my free time exploring nature, doodling, and crafting jewelry with my trusty pup (Lipa) at my side. Let's collaborate and create something awesome!</Bio>
+                <Bio>Hi there! I’m Natasha (Tash), a former Rehab Assistant turned Full Stack Web Developer living in beautiful Victoria, BC. I’m a lifelong learner and lover of all things creative. I spend my free time exploring nature, doodling, and crafting jewelry with my trusty pup (Lipa) at my side. Let's collaborate and create something awesome!</Bio>
+                {/* languages i know / programs i use */}
             </AboutBox>
         </Container>
     </Wrapper>
@@ -24,7 +25,7 @@ return(
 export default AboutMe;
 
 const Wrapper = styled.div`
-    height: 85vh;
+    /* height: 85vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +43,13 @@ const Waves = styled.div`
 const Container = styled.div`
     position: absolute;
     display: flex;
+
+    @media screen and (max-width: 850px) {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
 `;
 
 const PhotoBox = styled.div`
@@ -49,6 +57,10 @@ const PhotoBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 850px){
+        width: 100vw;
+    }
 `;
 
 const Photo = styled.img`
@@ -56,6 +68,11 @@ const Photo = styled.img`
     height: 40vw; 
     object-fit: cover; 
     object-position: 60% 0;
+
+    @media screen and (max-width: 850px){
+        width: 80%;
+        height: auto;
+    }
 `;
 
 const AboutBox = styled.div`
@@ -65,10 +82,14 @@ const AboutBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 850px){
+        width: 90%;
+    }
 `;
 
 const Title = styled.div`
-    font-size: calc(20px + 2vmin);
+    font-size: calc(20px + 2vw);
 `;
 
 const Bio = styled.div`

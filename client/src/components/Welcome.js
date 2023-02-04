@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     background-image: url(${schoenimg});
     background-size: cover;
     background-position: center center;
-    height: 95vh;
+    height: 90vh;
 `;
 
 const Rightside = styled.div`
@@ -30,6 +30,6 @@ const Rightside = styled.div`
 `;
 
 const Greeting = styled.h1`
-    padding-top: 10vh;
+    padding-top: 7vh;
     font-size: 7vw;
 `;

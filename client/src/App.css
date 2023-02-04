@@ -9,11 +9,11 @@
 }
 
 .capital{
-  font-size: calc(20px + 2vmin);
+  font-size: calc(20px + 2vw);
 }
 
 p {
-  font-size: calc(10px +2vmin);
+  font-size: calc(10px +2vw);
 }
 
 .small-section {

@@ -21,29 +21,25 @@ const MyWork = () => {
     
 
 return (
-    // if so will need projects component and map over them ? 
     // may have pop up when clicked to be bigger details or go to another page?
     <Wrapper>
         <Title>MY WORK</Title>
         <div className="big-section carousel" >
             <div className="inner-carousel">
                 {projects.length > 0 ? projects.map((project)=>{
-                    console.log(project)
                     return (
                     <Project key={project.name}>
                         <ImgWrapper>
                         <Img className="img-mywork" src={require(`../photos/${project.photo}`)} alt={project.name}/>
                         </ImgWrapper>
                         <InfoBox>
-                            <h2>{project.name}</h2>
+                            <Link href={project.link}>{project.name}</Link>
                             <p>{project.description}</p>
-                            <Link href={project.link}>link to project</Link>
                         </InfoBox>
                     </Project>)
                 }): <p>loading</p>}
             </div>
         </div>
-
     </Wrapper>
 );
 }
@@ -51,32 +47,32 @@ return (
 export default MyWork;
 
 const Wrapper = styled.div`
-    height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 `;
 
 const Title = styled.h2`
-    font-size: calc(20px + 2vmin);
+    font-size: calc(20px + 2vw);
     height: 20%;
     justify-content: center;
     display: flex;
     align-items: center;
+    margin-bottom: 2%;
 `;
 
 const InfoBox = styled.div`
     visibility: hidden;
     position: absolute;
     width: 100%;
-    min-height: 18vh;
-    top: 72%;
+    min-height: 25%;
+    top: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: rgba(237,240,241, 0.9);
-    padding: 2vh;
+    justify-content: center;
 `;
 
 const Project = styled.div`
@@ -116,11 +112,9 @@ const Img = styled.img`
 
 const Link = styled.a`
     text-decoration: none;
-
+    font-size: 2.5vw;
+    color: #334036;
     &:hover {
-        color: rgba(90,173,125);
-    }
-    &:visited {
         color: rgba(90,173,125);
     }
 `;
