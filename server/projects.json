@@ -1,7 +1,7 @@
 [
     {
         "name": "Ecommerce Store",
-        "photo":"",
+        "photo":"ecommerce-store.png",
         "description": "Group Project of an E-commerce store as part of the curriculum of Concordia Univeristy's Full Stack Web Development Bootcamp. I created the RESTful endpoints in the backend and search bar functionality in the frontend.",
         "link":"https://github.com/nem67127/group-project-ecommerce"
     },

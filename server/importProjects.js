@@ -23,3 +23,5 @@ const batchImportProjects = async () => {
     client.close();
   }
 };
+
+batchImportProjects();

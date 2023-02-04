@@ -37,7 +37,7 @@ return (
                         <InfoBox>
                             <h2>{project.name}</h2>
                             <p>{project.description}</p>
-                            <a href={project.link}>link to project</a>
+                            <Link href={project.link}>link to project</Link>
                         </InfoBox>
                     </Project>)
                 }): <p>loading</p>}
@@ -75,7 +75,7 @@ const InfoBox = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(237,240,241, 0.9);
     padding: 2vh;
 `;
 
@@ -112,5 +112,16 @@ const Img = styled.img`
     object-fit: scale-down;
     height: 90%;
     align-self: center;
+`;
+
+const Link = styled.a`
+    text-decoration: none;
+
+    &:hover {
+        color: rgba(90,173,125);
+    }
+    &:visited {
+        color: rgba(90,173,125);
+    }
 `;
 
