@@ -57,49 +57,6 @@ p {
   display: inline-flex;
 }
 
-.start {
-  margin-left: 7.5vw;
-}
-
-.card{
-  margin-right: 7.5vw;
-  width: 80vw;
-  height: 95%;
-  background: linear-gradient(217deg, rgba(237,240,241, 0.8), rgba(187, 227, 217, 0) 70.71%),
-            linear-gradient(336deg, rgba(90,173,125, 0.8), rgba(178, 203, 178, 0) 70.71%),
-            linear-gradient(140deg, rgba(199,219,229, 0.8), rgba(157, 157, 167, 0) 70.71%);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-}
-
-.img-mywork {
-  object-fit: scale-down;
-  height: 90%;
-  align-self: center;
-}
-
-.img-wrapper {
-  height: 100%;
-  display:flex;
-  justify-content: center;
-}
-
-.img-description {
-  visibility: hidden;
-  position: relative;
-  width: 80%;
-  top: -100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.card:hover .img-description{
-  visibility: visible;
-}
-
 /* Conctact Me section */
 
 .section-contact {
